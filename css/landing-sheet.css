@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+	/* animatie info logo, titel, link: landingspagina */
+	@keyframes animatieLogo
+	{
+  		from {opacity:0;}
+  		to {opacity:1;}
+		from {margin-left:0px;}
+		to {margin-left:250px;}
+	}
+		
+	@keyframes animatieTitel
+	{
+  		from {opacity:0;}
+  		to {opacity:1;}
+		from {margin-right:0px;}
+		to {margin-right:175px;}
+	}
+		
+	@keyframes animatieLink
+	{
+  		from {opacity:0;}
+  		to {opacity:0.5;}
+		from {margin-top:400px;}
+		to {margin-top:75px;}
+	}	
+	
+	*
+	{
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	body
+	{
+		background-color:#6b55db;
+	}
+		
+		
+	/* gecentreerd */
+	#contentBox
+	{
+		width:1200px;
+		height:350px;
+		margin:0 auto;
+		margin-top:400px;
+	}
+		
+	/* titel text */	
+	#contentBox .titelAfbeelding
+	{
+		margin-top:125px;
+		margin-right:175px;
+		float: right;
+		animation-name: animatieTitel;
+		animation-duration: 3s;
+		animation-timing-function: ease-in-out;
+	}
+	
+	/* logo afbeelding */
+	#contentBox .logoAfbeelding
+	{
+		margin-top:75px;
+		margin-left:250px;
+		animation-name: animatieLogo;
+		animation-duration: 2.5s;
+		animation-timing-function: ease-in-out;
+	}
+		
+	/* enter link */
+	#contentBox h1
+	{
+		opacity:0.5;
+		font-family: "FuturaBT-Medium",Sans-Serif;	
+		font-size:3.5em;
+		letter-spacing:0.075em;
+		color:#44e1dc;
+		text-shadow:2px 2px 4px rgba(0,0,0,0.75);
+		margin:0 auto;
+		width:200px;
+		height:100px;
+		margin-top:75px;
+		cursor: pointer;
+		animation-name: animatieLink;
+		animation-duration: 2.5s;
+		animation-timing-function: ease-in-out;
+		transition:opacity 0.4s ease-out;
+	}
+		
+	#contentBox h1:hover
+	{
+		opacity:1;
+		transition:opacity 0.4s ease-out;
+	}
+		
+	#contentBox h1 a
+	{
+		color:#44e1dc;
+		text-decoration: none;
+	}
+		
+	#contentBox h1 a:visited
+	{
+		color:#44e1dc;
+	}
+

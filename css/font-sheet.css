@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+	@font-face 
+	{
+  		font-family: "FuturaBT-Medium";
+  		src: url("../fonts/FuturaMediumBT.woff2") format("woff2"); /* Modern Browsers */
+  		font-weight: normal;
+  		font-style: normal;
+	}
+		
+	@font-face 
+	{
+  		font-family: "Aquawax-Medium";
+  		src: url("../fonts/AquawaxMediumTrial.woff2") format("woff2"); /* Modern Browsers */
+  		font-weight: normal;
+  		font-style: normal;
+	}
+

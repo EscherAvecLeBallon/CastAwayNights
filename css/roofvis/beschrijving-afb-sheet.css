@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+
+		/* animatie beschrijving boven > onder */
+		@keyframes positioneer 
+		{
+  			from {margin-top:-450px;}
+  			to {margin-top:0px;}
+		}	
+	
+		*
+		{ 
+		  padding:0;
+		  margin:0;
+		}
+		
+		body
+		{
+			overflow:hidden; /* voorkom scrollbars */
+			background-color:#295bbb;
+			animation-name: positioneer;
+			animation-duration: 2s;
+			animation-timing-function: ease-in-out;
+		}
+			
+		body article
+		{
+			margin-top:10px;
+			margin-left:10px;
+		}
+			
+		body article header h1,h2
+		{
+			font-family: "FuturaBT-Medium",Sans-Serif;
+			text-shadow:2px 2px 1px rgba(0,0,0,0.25);
+			letter-spacing: 0.025em;
+		}
+			
+		body article header h1
+		{
+			font-size:1.5em;
+			color:#5aba47;
+		}
+			
+		body article header h2
+		{
+			padding-top:5px;
+			font-size:1.2em;
+			font-style: oblique;
+			color:#afc673;
+		}
+			
+		body article p
+		{
+			font-family: "Aquawax-Medium",Sans-Serif;
+			font-size:0.9em;
+			letter-spacing: 0.025em;
+			color:#a5dded;
+			text-shadow:1px 1px 1px gray;
+			text-align: left;
+			padding-top:55px;
+			padding-bottom:15px;
+			width:95%;
+		}
+		
+		body article span
+		{
+			margin-left:155px;
+			display:block;
+			margin-top:-45px;
+	
+			
+		}
+		
+		/* styling link naar soort pagina */
+		body article span a
+		{
+			
+			border:outset #66c8cc 1px;
+			font-family: 'Varela Round', sans-serif;
+			font-size: 0.9em;
+			letter-spacing:0.025em;
+			text-decoration: none;
+			font-weight: lighter;
+			text-shadow:1px 1px 1px rgba(0,0,144,0.5);
+			filter:drop-shadow(1px 1px 1px darkslateblue);
+			padding:8px;
+			text-decoration: none;
+			background-color:#c44240;
+			background-image:url('../../images/achtergrondPatroonSV2-BxFPs.png'),linear-gradient(rgba(0, 0, 139, 0.096),rgba(255, 218, 185, 0.378));
+			box-shadow:1px 1px 1px rgba(0,0,0,0.5);
+			color:white;
+			opacity:0.75;
+			transition: opacity 0.4s ease;
+			border-radius:5px;
+		}
+			
+		body article span a:hover
+		{
+			text-decoration: underline;
+			text-underline-offset: 4px;
+			text-decoration-thickness: 1px;
+		    text-decoration-color: rgba(255,255,255,0.50);
+			text-decoration-style: double;
+			opacity:0.93;
+			transition: opacity 0.4s ease;
+		}
+

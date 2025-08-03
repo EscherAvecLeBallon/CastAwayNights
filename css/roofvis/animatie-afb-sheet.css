@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+		*
+		{ 
+		  padding:0px;
+		  margin:0px;
+		}
+		
+		/* animatie soort afbeelding links > rechts */
+		@keyframes positioneer 
+		{
+  			from {margin-left:-600px;}
+  			to {margin-left:0px;}
+		}
+		
+		body
+		{
+			overflow:hidden; /* voorkom scrollbars (in Iframe) */
+			background-color:black;
+			background-image:url("../../images/roofvisPagina/golven-achtergrond.png"),linear-gradient(rgba(58, 51, 156, 0.5),rgba(102, 30, 112, 0.829) );
+		}
+		
+		body main img
+		{
+			animation-name: positioneer;
+			animation-duration: 2s;
+			animation-timing-function: ease-in-out;
+		}
+

@@ -1,0 +1,60 @@
+/* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Geen rand rond het iframe */
+    visibility:hidden;
+    position:absolute;
+    overflow:hidden;
+
+}
+
+.loader-container {
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.loader-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+
+@keyframes verbreedBalk
+{
+      from {width:0%;}
+      to {width:99%;}
+}
+
+.loader-progress {
+    height: 100%;
+    width: 0%; /* Start als volledig geladen voor de test */
+    background-color: #3498db;
+    animation-name: verbreedBalk;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+
+}
+
+
+
+.loading-text {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}

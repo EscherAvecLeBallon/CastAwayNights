@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Gallerij - Afbeelding 2</title>
+	
+	<style>
+	
+		
+		@keyframes fade
+		{
+  		  from {opacity:0;}
+  		  to {opacity:1;}
+		}
+		
+		@keyframes slide
+		{
+		  from {margin-left:-900px;}
+		  to {margin-left:0px;}
+		}
+		
+		
+		*
+		{ 
+		  padding:0;
+		  margin:0;
+		}
+		
+		body
+		{
+			overflow:hidden;
+			animation-name: slide;
+			animation-duration: 0.75s;
+			animation-timing-function: ease-in;
+		}
+		
+		body img
+		{
+			animation-name: fade;
+			animation-duration: 4s;
+			animation-timing-function: ease-out;
+		}
+	
+	</style>
+</head>
+
+<body>
+
+	<img src="../../../images/inbeeldPagina/gallerij/gallerij-afbeelding-twee.jpg">
+
+
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/font-sheet.css" rel="stylesheet" type="text/css">
+    <title>(\_-__ Starry Nights __-_/) ||> welkom: Sluip Rovers</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, rgba(240, 248, 255, 0.9) 0%, rgba(173, 216, 230, 0.8) 50%, rgba(63, 155, 104, 0.9) 100%),
+                radial-gradient(circle, rgba(240, 248, 255, 0.8) 0%, rgba(53, 87, 182, 0.6) 70%),
+                repeating-linear-gradient(0deg, rgba(44, 92, 223, 0.5) 0px, rgba(254, 240, 255, 0.781) 1px, rgba(173, 216, 230, 0.5) 1px, rgba(105, 240, 250, 0.5) 2px),
+                repeating-linear-gradient(90deg, rgba(66, 67, 163, 0.5) 0px, rgba(51, 207, 255, 0.5) 1px, rgba(90, 219, 252, 0.5) 1px, rgba(96, 154, 221, 0.5) 2px);
+            background-size: 100% 100%, 100% 100%, 10px 10px, 10px 10px;
+            background-attachment: fixed;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            transition: background 0.37s ease-in-out;
+        }
+
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 1s ease-out;
+        }
+
+        .logo-container {
+            position: relative;
+            background-color: #6B55DB;
+            padding: 5px;
+            border-radius: 15px;
+            border: 2px dashed #b0e0e6;
+            animation: pulsate 1.6s infinite;
+            margin-bottom: 20px;
+            top: -60px;
+            overflow: hidden;
+            outline: dashed 0.124em palevioletred;
+        }
+
+        .logo-container::before {
+            content: '';
+            position: absolute;
+            top: -150%;
+            left: -150%;
+            width: 400%;
+            height: 400%;
+            background: linear-gradient(135deg, rgba(117, 241, 214, 0.8) 70%, rgba(163, 36, 36, 0.712) 40%, rgba(170, 89, 218, 0.8) 60%);
+            border-radius: 50%;
+            animation: glint 1.73s infinite ease-in-out;
+            transform: rotate(45deg);
+            mix-blend-mode: color-dodge;
+            pointer-events: none;
+        }
+
+  
+
+        @keyframes pulsate {
+            0% {
+                transform: scale(0.76);
+                border-color: #7dffde;
+            }
+
+            20% {
+                transform: scale(1.02);
+                border-color: #3083ff;
+            }
+
+            40% {
+                transform: scale(1.08);
+                border-color: #09005e;
+            }
+
+            60% {
+                transform: scale(1.03);
+                border-color: #8ebbff;
+            }
+
+            80% {
+                transform: scale(1.06);
+                border-color: #3083ff;
+            }
+
+            100% {
+                transform: scale(0.71);
+                border-color: #18005c;
+            }
+        }
+
+        @keyframes glint {
+            0% {
+                background-position: -200% -200%;
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0.56;
+            }
+
+            50% {
+                background-position: 100% 100%;
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 0.53;
+            }
+
+            100% {
+                background-position: 200% 200%;
+                opacity: 0;
+            }
+        }
+
+        .loader-bar {
+            width: 30%;
+            border-radius: 7px;
+            overflow: hidden;
+            position: relative;
+            height: 16px;
+            background-image: linear-gradient(45deg, rgba(190, 67, 129, 0.623) 25%, transparent 25%, transparent 20%, rgba(103, 188, 216, 0.6) 20%, rgba(173, 216, 230, 0.6) 55%, transparent 65%, transparent),
+                linear-gradient(45deg, rgba(134, 187, 247, 0.863) 25%, transparent 25%, transparent 30%, #41cbf57a 30%, rgb(167, 255, 255) 35%, transparent 25%, transparent);
+            background-size: 20px 20px, 40px 40px;
+            animation: dilateBackground 2s infinite;
+            border: 2px groove rgba(0, 191, 255, 0.75);
+            box-shadow:
+                0 4px 8px rgba(0, 0, 0, 0.6),
+                0 -4px 8px rgba(255, 255, 255, 0.2),
+                inset 0 1px 2px rgba(0, 0, 0, 0.5),
+                inset 0 -1px 2px rgba(128, 230, 255, 0.719),
+                0 4px 12px rgba(70, 130, 180, 0.6),
+                0 6px 16px rgba(32, 178, 170, 0.4);
+        }
+
+        @keyframes dilateBackground {
+            0% {
+                background-color: #3f455f;
+            }
+
+            50% {
+                background-color: #2483ff;
+            }
+
+            100% {
+                background-color: #38496d;
+            }
+        }
+
+        .loader-layer {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            transition: width 0.03s;
+            mix-blend-mode: screen;
+            background-size: 200% 100%;
+        }
+
+        @keyframes moveRightToLeft {
+            0% {
+                background-position: 60% 0;
+            }
+
+            100% {
+                background-position: -75% 0;
+            }
+        }
+
+        #loader-layer1 {
+            background: linear-gradient(135deg, rgba(63, 81, 181, 0.6), rgba(106, 228, 81, 0.4));
+            animation: moveRightToLeft 0.86s linear infinite;
+        }
+
+        #loader-layer2 {
+            background: linear-gradient(225deg, rgba(123, 31, 162, 0.8), rgba(250, 30, 30, 0.5));
+            animation: moveRightToLeft 1s linear infinite reverse;
+        }
+
+        #loader-layer3 {
+            background: linear-gradient(135deg, rgb(209, 221, 46), rgba(123, 31, 162, 0.6));
+            animation: moveRightToLeft 0.8s ease-in-out infinite;
+        }
+
+        #loader-layer4 {
+            background: linear-gradient(225deg, rgb(16, 216, 252), rgba(63, 81, 181, 0.8));
+            animation: moveRightToLeft 2s linear infinite reverse;
+        }
+
+        #loader-layer5 {
+            background: linear-gradient(135deg, rgba(115, 236, 131, 0.6), rgba(15, 209, 216, 0.4));
+            animation: moveRightToLeft 1s ease-in-out infinite;
+        }
+
+        #loader-layer6 {
+            background: linear-gradient(225deg, rgba(123, 31, 162, 0.8), rgba(30, 33, 255, 0.5));
+            animation: moveRightToLeft 0.4s linear infinite reverse;
+        }
+
+        #myIframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader-container">
+        <div class="logo-container">
+            <img src="http://www.flippant.eu/Dag/images/titelPagina/sluiproversLogo.png" class="logo" alt="Logo">
+        </div>
+        <div class="loader-bar">
+            <div id="loader-layer1" class="loader-layer"></div>
+            <div id="loader-layer2" class="loader-layer"></div>
+            <div id="loader-layer3" class="loader-layer"></div>
+            <div id="loader-layer4" class="loader-layer"></div>
+            <div id="loader-layer5" class="loader-layer"></div>
+            <div id="loader-layer6" class="loader-layer"></div>
+        </div>
+        <span style="margin-top:80px; font-family: 'Aquawax-Medium',Sans-Serif;font-size:1.7em;color:white;letter-spacing: 0.68em;color:peachpuff;font-weight:100;font-stretch: ultra-expanded;opacity:0.75;filter:drop-shadow(1px 1px 1px violet);font-variant: small-caps;">
+            Starry Nights
+        </span>
+    </div>
+
+    <iframe id="myIframe" src=""></iframe>
+
+    <script>
+        let progress = 0;
+        let racingInterval = null;
+        let iframeLoaded = false;
+
+        function updateProgressBar() {
+            const interval = setInterval(() => {
+                progress += 5;
+                setLayerWidths(progress);
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    startRacingEffect();
+                }
+            }, 100);
+        }
+
+        function setLayerWidths(progress) {
+            document.getElementById('loader-layer1').style.width = `${progress}%`;
+            document.getElementById('loader-layer2').style.width = `${progress - 1}%`;
+            document.getElementById('loader-layer3').style.width = `${progress - 4}%`;
+            document.getElementById('loader-layer4').style.width = `${progress - 3}%`;
+
+            document.getElementById('loader-layer5').style.width = `${100 - progress}%`;
+            document.getElementById('loader-layer6').style.width = `${100 - progress + 30}%`;
+        }
+
+        function startRacingEffect() {
+            let progressRacing = 100;
+            racingInterval = setInterval(() => {
+                progressRacing += 3;
+                const verticalOffset = Math.sin(progressRacing / 20) * 1.52;
+
+                setLayerWidths(progressRacing % 75);
+
+                ['loader-layer1', 'loader-layer2', 'loader-layer3', 'loader-layer4'].forEach((layer, i) => {
+                    const el = document.getElementById(layer);
+                    el.style.transform = `translateY(${verticalOffset * (i % 2 === 0 ? 1 : -1)}px)`;
+                    el.style.filter = `brightness(${0.1 + Math.sin(progressRacing / 20)})`;
+                });
+
+            }, 60);
+        }
+
+        function hideLoaderAndShowIframe() {
+            const loader = document.querySelector('.loader-container');
+            const iframe = document.getElementById('myIframe');
+            
+            // Change background to blue tones
+            document.body.style.background = 'linear-gradient(180deg, rgba(240, 248, 255, 0.9) 0%, rgba(173, 216, 230, 0.8) 50%, rgba(63, 155, 104, 0) 100%), radial-gradient(circle, rgba(240, 248, 255, 0.8) 0%, rgba(53, 87, 182, 0.6) 70%), repeating-linear-gradient(0deg, rgba(44, 92, 223, 0.5) 0px, rgba(254, 240, 255, 0.781) 1px, rgba(173, 216, 230, 0.5) 1px, rgba(105, 240, 250, 0.5) 2px), repeating-linear-gradient(90deg, rgba(66, 67, 163, 0.5) 0px, rgba(51, 207, 255, 0.5) 1px, rgba(90, 219, 252, 0.5) 1px, rgba(96, 154, 221, 0.5) 2px)';
+            
+            // Fade out loader
+            loader.style.opacity = '0';
+            
+            // Fade in iframe
+            iframe.style.visibility = 'visible';
+            iframe.style.opacity = '1';
+        }
+
+        function checkIframeLoaded() {
+            const iframe = document.getElementById('myIframe');
+            iframe.addEventListener('load', () => {
+                iframeLoaded = true;
+                hideLoaderAndShowIframe();
+            });
+       
+
+            setTimeout(() => {
+
+                iframe.src = 'SluipRovers.html';
+                window.location.href = 'SluipRovers.html';
+
+            }, 1300);
+
+
+        }
+
+        window.onload = function () {
+            updateProgressBar();
+            setTimeout(() => {
+                if (!iframeLoaded) {
+                    hideLoaderAndShowIframe();
+                }
+                checkIframeLoaded();
+            }, 7900);
+           
+        };
+    </script>
+</body>
+
+</html>

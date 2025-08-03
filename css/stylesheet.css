@@ -1,0 +1,2371 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+	*
+	{
+		padding: 0px;
+		margin: 0px;
+	}
+
+
+	:root 
+	{
+		--visjeOP1: 0.23;
+		--visjeOP2: 0.25;
+		--visjeOP3: 0.33;
+		--visjeOP4: 0.27;
+		--visjeOP5: 0.29;
+		--visjeOP6: 0.39;
+		--visjeOP7: 0.44;
+		--visjeOP8: 0.51;
+		--visjeOP9: 0.49;
+		--visjeOP10: 0.31;
+		--visjeOP11: 0.32;
+		--visjeOP12: 0.29;
+		
+		--vis1HUE: 0deg;
+		--vis2HUE: 0deg;
+		--vis3HUE: 0deg;
+		--vis4HUE: 0deg;
+		--vis5HUE: 0deg;
+		--vis6HUE: 0deg;
+		--vis7HUE: 0deg;
+		--vis8HUE: 0deg;
+		--vis9HUE: 0deg;
+		--vis10HUE: 0deg;
+		--vis11HUE: 0deg;
+		--vis12HUE: 0deg;
+
+		--vis1SHD: 0.4;
+		--vis2SHD: 0.32;
+		--vis3SHD: 0.42;
+		--vis4SHD: 0.30;
+		--vis5SHD: 0.2;
+		--vis6SHD: 0.26;
+		--vis7SHD: 0.3;
+		--vis8SHD: 0.24;
+		--vis9SHD: 0.44;
+		--vis10SHD: 0.58;
+		--vis11SHD: 0.66;
+		--vis12SHD: 0.73;
+
+
+		--blFP_u : 0.56;
+		--blRP_u : 0.86;
+		--blFP_d : 0.86;
+
+		--bl_u : 0.8;
+		--bl_d : 0.1;
+		--bl_i : 0.33;
+
+		--sdwFP_C: #00000039;
+		--sdw_C: #00000059;
+
+	
+	}
+
+
+	
+
+	body
+	{
+		width:2350px;
+		background: rgb(65, 83, 185);
+		background-image:url(../images/achtergrondPatroonS0.png),url(../images/bA.png),url(../images/achtergrondPatroonF.png),url(../images/bA2.png);
+		background-repeat: repeat, repeat, repeat, repeat;
+		margin:0 auto;
+		border-left:double 6px rgba(27, 134, 111, 0.395);
+		border-right:double 6px rgba(27, 134, 111, 0.395);
+		outline:6px double rgba(63, 64, 120, 0.375);
+		border-bottom:6px dashed rgba(88, 61, 139, 0.31);
+		box-shadow:-1px 0px 1px 2px rgba(125, 125, 255, 0.27),1px 0px 1px 2px rgba(125, 125, 255, 0.27);
+	}
+		
+	.wrapper
+	{
+		margin:0 auto;
+		display:contents;
+		position:absolute;
+	}
+		
+		
+	/* kleur markering: toepassing woorden binnen alinea */
+	.markering
+	{
+		color: rgb(255, 195, 215);
+	}
+	
+	.decoratief
+	{
+		text-decoration: underline;
+		text-underline-offset: 13px;
+		text-decoration-thickness: 4px;
+		text-decoration-style:wavy;
+		text-decoration-color: rgba(0,0,0,0.13);
+		color:#9cfffc;
+		font-style:italic;
+	}
+	
+	h1,h2,h3, .numeriek
+	{
+		font-family: "FuturaBT-Medium",Sans-Serif;	
+	}
+		
+	h1
+	{
+		font-size:3em;
+		text-shadow:2px 2px 2px rgba(0,0,144,0.19);
+		letter-spacing: 0.025em;
+		color:#44e1dc;
+		border-bottom: ridge 10px rgba(137, 143, 231, 0.75);
+		padding-bottom:10px;
+		display:inline-block;
+		filter:drop-shadow(1px 1px 1px darkslateblue);
+	}
+		
+	h2
+	{
+		font-size:2.5em;
+		letter-spacing: 0.075em;
+		text-shadow:2px 2px 2px rgba(0,0,119,0.39);
+		color:#ca7fa5;
+		font-style: oblique;
+		filter:drop-shadow(1px 1px 1px darkslateblue);
+	}
+	
+	h1::first-letter,h2::first-letter
+	{
+		font-weight:bold;	
+	}
+		
+	
+		
+	/* styling paragraaf */	
+	p
+	{
+		font-family: "Aquawax-Medium",Sans-Serif;
+		line-height: 1.3;
+		letter-spacing: 0.025em;
+		text-align: left;
+		text-shadow:1px 1px 2px rgba(0,0,0,0.25);
+		filter:drop-shadow(2px 1px 1px rgba(139, 0, 0, 0.2));
+		font-size:1.4em;
+		color:rgb(215, 230, 240);
+		hyphens: auto;
+	}
+		
+	p::first-letter
+	{
+		font-weight: bold;	
+	}
+		
+	/* styling kop binnen lopende text */	
+	.kop
+	{
+		font-family: "Aquawax-Medium",Sans-Serif;
+		font-size:2em;
+		display:inline-block;
+		padding-bottom: 50px;
+		letter-spacing: 0.045em;
+		color:#44e1dc;
+		text-shadow:2px 2px 2px rgba(0,0,144,0.25);
+		filter:drop-shadow(1px 1px 1px darkslateblue);
+	}
+		
+	.streepHorizontaal1
+	{
+		width:850px;
+
+		border-bottom: outset 7px  rgba(154, 68, 225, 0.5);
+		border-top:solid 1px rgba(84, 140, 204, 0.544);
+
+		box-shadow:0px 1px 0px 0px rgba(153, 205, 50, 0.11);
+		background-image:url(../images/achtergrondPatroonSV3tO.png);
+
+		outline:1px dashed rgba(0, 255, 255, 0.17);
+		outline-offset: 2px;
+
+		float:left;
+		display:block;
+	}
+		
+	.streepHorizontaal2
+	{
+		width:850px;
+		margin-top:7px;
+
+		border-bottom: outset 7px  rgba(152, 96, 226, 0.45);
+		border-top:groove 1px  rgba(218, 165, 32, 0.337);
+
+		box-shadow:0px 1px 0px 0px rgba(153, 205, 50, 0.11);
+		background-image:url(../images/achtergrondPatroonSV3tO.png);
+
+		outline:1px dashed rgba(255, 0, 200, 0.26);
+		outline-offset: 2px;
+
+
+		float:left;
+	}
+
+
+
+	.streephorizontaalOmlijnt
+	{
+		filter:drop-shadow(2px -2px 0.02cm rgba(0, 0, 0, 0.815));
+	}
+
+	
+	/* pagina vullende (horizontaal) wrapper */	
+	#wrapperTitelPagina
+	{
+		height:1000px;
+		width:100%;
+		--wrapperTitelPaginaH:1000px;
+		background-color:#6b55db;
+		background-image:url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		
+	}
+	
+	/* Titel pagina (Sluip Rovers) */	
+	#sectionTitelPagina
+	{
+		width:1330px;
+		height: inherit;
+		margin:0 auto;
+		background-color:#6b55db;
+		box-shadow: -5px 0 15px -5px rgba(255, 235, 140, 0.13),5px 0 15px -5px rgba(255, 235, 140, 0.13);
+		border-left:ridge 12px rgba(216, 112, 147, 0.24);
+		border-right:groove 12px rgba(216, 112, 147, 0.24);
+		--overlayH1: calc(var(--wrapperTitelPaginaH) - 2px);
+
+	}
+	
+	
+
+	@keyframes fadeinTitel
+	{
+  		from {opacity:0;}
+  		to {opacity:1;}
+	}
+	
+	/* Titel afbeelding */	
+	#sectionTitelPagina header img:nth-of-type(1)
+	{
+		padding-top:75px;
+		padding-left:60px;
+		display:block;
+		float:left;
+		animation-name: fadeinTitel;
+		animation-duration: 9.5s;
+		animation-timing-function: ease-in-out;
+		filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.35));
+	}
+
+
+
+	#sectionTitelPagina header div:nth-of-type(1)
+	{
+		float:none;
+	}
+
+
+
+	#sectionTitelPagina header div
+	{
+		width:545px;
+		margin-left:25px;
+		opacity: 0.75;
+	}
+
+	
+		
+		
+	@keyframes animatieLogo
+	{
+  		from { transform: rotate(-165deg);}
+  		to { transform: rotate(0deg);}
+		from { opacity:0;}
+  		to { opacity:0.5;}
+	}
+
+	@keyframes stroboLogo
+	{
+		70% {
+				opacity: 0.62;
+			}
+		
+			75% {
+				opacity: 0.92;
+			}
+		
+			77% {
+				opacity: 1;
+		
+			}
+		
+			80% {
+				opacity: 0.42;
+				filter: blur(5px);
+			}
+		
+			83% {
+				opacity: 1;
+				rotate: -2deg;
+		
+			}
+		
+		
+			85% {
+				opacity: 0.92;
+				scale: 0.8;
+			}
+		
+		
+			90% {
+				opacity: 0.83;
+				rotate: 3deg;
+			}
+		
+			95% {
+				opacity: 0.92;
+			}
+		
+		
+			100% {
+				opacity: 0.32;
+			}
+	}
+
+
+	@keyframes stroboLogoY
+	{
+		0% { opacity: 0.3; }
+
+		10% { opacity: 0.2;filter:hue-rotate(190deg);}
+
+		20% { opacity: 0.82; filter:blur(1px); }
+
+		30% { opacity: 0.6;filter:hue-rotate(140deg);}
+
+		40% { opacity: 0; }
+
+		50% { opacity: 0.4;filter:hue-rotate(240deg);filter:blur(1px);}
+
+		60% { opacity: 0.82;filter:blur(0px); }
+
+		70% { opacity: 0.8;filter:hue-rotate(40deg);filter:blur(1px);}
+
+		80% { opacity: 0;}
+
+		90% { opacity: 0.82; filter:hue-rotate(340deg);}
+
+		100% { opacity: 0.66; }
+	}
+
+	@keyframes stroboLogoYF
+	{
+  		from {opacity:0.66;}
+  		to {opacity:0.27;}
+	}
+
+			
+	/* Logo */	
+	#sectionTitelPagina header #bfLogo
+	{
+		padding-left:485px;
+		padding-top:65px;
+		opacity: 0.5;
+		animation-name: animatieLogo;
+		animation-duration: 5s;
+		animation-timing-function:cubic-bezier(1, 0, 0, 1);
+	}
+
+
+	#sectionTitelPagina header #bfLogoY
+	{
+		width:37px;
+		height:35px;
+		background-image:url('../images/titelPagina/sRy.png');
+		position:absolute;
+		margin-top:138px;
+		margin-left:-117px;
+		opacity:0;
+		
+
+	}
+
+
+	@keyframes fadeinGraphic
+	{
+  		from {opacity:0;}
+  		to {opacity:0.75;}
+	}
+		
+	/* Snoek visual */		
+	#sectionTitelPagina section #snoekGraphic
+	{
+		padding-top:215px;
+		padding-left:40px;
+		display:block;
+		float:left;
+		
+
+		animation-name: fadeinGraphic;
+		animation-duration: 8s;
+		animation-timing-function: steps(44);
+		filter: drop-shadow(-1px -1px 1px rgba(0,0,0,0.37));
+		opacity:0.75;
+		position:relative;
+		z-index:2;
+	}
+	
+		
+	@keyframes fadeinNavigatie
+	{
+  		from {opacity:0;filter:blur(13px);}
+  		to {opacity:0.88;filter:blur(0px);}
+	}
+
+	@keyframes fadebarCode
+	{
+  		from {opacity:0;filter:blur(11px);}
+  		to {opacity:0.73;filter:blur(0px);}
+	}
+		
+	/* Navigatie menu */	
+	#sectionTitelPagina section nav
+	{
+		padding-top:150px;
+	}
+
+	#sectionTitelPagina section nav ul li
+	{
+		animation-name: fadeinNavigatie;
+		animation-duration: 4s;
+		animation-timing-function: ease-in;
+		opacity:0.88;
+	}
+
+
+
+	.barCode
+	{
+		animation-name: fadebarCode;
+		animation-duration: 4.2s;
+		animation-timing-function:steps(11);
+		filter:drop-shadow(3px 3px 0.0002cm rgba(128, 128, 128, 0.253));
+	}
+		
+	@keyframes animatieAanwijzer
+	{
+  		from { margin-left:2000px;}
+  		to { margin-left:-60px;}
+
+	
+		25%  { opacity: 0;filter:brightness(100%); }
+		35%  { opacity: 0.7;filter:brightness(160%); }
+  		40%  { opacity: 1; filter:brightness(300%);}
+		50%  { opacity: 0.6; width:40px;height:40px;filter:brightness(100%);}
+  		70%  { opacity: 1; width:80px;height:80px; filter:brightness(300%); }
+ 		80%  { opacity: 0.85;width:60px;height:60px;filter:brightness(100%); }
+		85%  {filter:brightness(1000%);filter:blur(3px);filter:contrast(1000%);}
+		88%  {filter:contrast(100%);filter:blur(5px);opacity:1;width:20px;height:20px;}
+		90%  {filter:brightness(100%);filter:blur(0px);filter:invert();opacity:0.2;width:50px;height:52px;}
+		95%  { opacity: 0; }
+		96%  { opacity: 1; }
+		97%  { opacity: 0; }
+		98%  { opacity: 1; }
+  		100% { opacity: 0.5; }
+	}	
+	
+
+
+	/* aanwijzer */	
+	#sectionTitelPagina section nav img:first-of-type
+	{
+		position:absolute;
+		margin-left:-60px;
+		margin-top:-40px;
+		width:45px;
+		height:47px;
+		opacity:0;
+		animation-name: animatieAanwijzer;
+		animation-fill-mode: forwards;
+		animation-duration: 3.6s;
+		animation-timing-function:cubic-bezier(0.224, 0.6, 0.115, 1.185);
+		animation-delay: 1.9s;
+	}
+
+
+
+	
+	/* Menu */
+	#sectionTitelPagina section nav ul
+	{
+		list-style-type: none;
+	}
+	
+
+
+	#sectionTitelPagina section nav ul li
+	{
+		padding-top:25px;
+	}
+		
+	#sectionTitelPagina section nav ul li a
+	{
+		font-family: 'Varela Round', sans-serif;
+		font-size: 1.6em;
+		letter-spacing:0.1em;
+		text-decoration: none;
+		font-weight: bolder;
+		text-shadow:1px 2px 1px rgba(0,0,0,0.57);
+		color:#96f4ff;
+		transition: color 0.8s ease-out;
+		background-position:left;
+	}
+		
+	#sectionTitelPagina section nav ul li a:hover
+	{
+		transition: color 0.8s ease-in;
+		transition: background 0.6s ease-in-out;
+
+		padding-bottom:8px;
+		background-image:url("../images/titelPagina/bottomBorder.png");
+		background-size: 51px 8px;
+		background-repeat: repeat-x;
+		background-position: bottom;
+		color:#ffbdf4;
+	}
+		
+
+
+	/* pagina vullende (horizontaal) wrapper */
+	#wrapperSluipenPagina
+	{
+		width:100%;
+		height:1384px;
+		--wrapperSluipenPaginaH:1384px;
+		background-color:#1b54cf;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);
+	}
+	
+	/* sub pagina (Sluipen langs het water) */
+	#sectionSluipenPagina
+	{
+		width:1330px;
+		height: inherit;
+		margin:0 auto;
+		background-color:#2768bd;
+		background-image:url(../images/achtergrondPatroonSVtXIII.png);
+
+
+		box-shadow: -5px 0 15px -5px rgba(123, 115, 233, 0.6),5px 0 15px -5px rgba(123, 115, 233, 0.6),inset 0 5px 5px -5px rgba(0,0,0,0.4);
+		border-left:ridge 12px rgba(0,0,0,0.1);
+		border-right:groove 12px rgba(0,0,0,0.1);
+		border-top:double 4px rgba(0,0,0,0.1);
+
+		--overlayH1: calc(var(--wrapperSluipenPaginaH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+	}
+
+
+	
+
+	/* kolom met aanvullende afbeeldingen */	
+	#sectionSluipenPagina .kolomLinks
+	{
+		margin-top:80px;
+		width:200px;
+		height: 900px;
+		float:left;
+		display:block;
+		padding-left:100px;
+	}
+		
+	#sectionSluipenPagina .kolomLinks img:nth-of-type(1)
+	{
+		filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.75));
+		opacity: 0.5;
+	}
+
+	#sectionSluipenPagina .kolomLinks img:nth-of-type(2)
+	{
+		padding-top:120px;
+		opacity: 0.5;
+		filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.75));
+	}
+		
+	#sectionSluipenPagina .kolomLinks img:nth-of-type(3)
+	{
+		padding-top:130px;
+		padding-left:30px;
+		opacity: 0.5;
+		filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.75));
+	}
+		
+	#sectionSluipenPagina .kolomLinks img:nth-of-type(4)
+	{
+		padding-top:80px;
+		padding-left:30px;
+		opacity: 0.5;
+		filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.75));
+	}
+		
+
+	/* pagina  text */	
+	#sectionSluipenPagina article
+	{
+		width:800px;
+		margin-left:400px;
+		padding-bottom:42px;
+	}
+		
+	#sectionSluipenPagina article h1
+	{
+		padding-top:80px;
+		margin-bottom:25px;
+	}
+		
+	#sectionSluipenPagina article p:first-of-type
+	{
+		padding-top:50px;
+	}
+		
+	#sectionSluipenPagina article p
+	{
+		padding-bottom:50px;
+	}
+		
+		
+	#sectionSluipenPagina article p img
+	{
+		float:right;
+		padding-top:40px;
+		padding-left:75px;
+		opacity:0.5;
+	}
+		
+		
+	/* pagina vullende (horizontaal) wrapper */	
+	#wrapperRoofvisPagina
+	{
+		width:100%;
+		--wrapperRoofvisPaginaH:1859px;
+		background-color:#2963bb;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);		
+	}
+	
+	/* sub pagina (Roofvis in ons land) */
+	#sectionRoofvisPagina
+	{
+		width:1330px;
+		height:1855px;
+		margin:0 auto;
+
+		background-color:#2768bd;
+	
+		background-image:url("../images/roofvisPagina/aH.png"),url(../images/achtergrondPatroonSVtXIII.png);
+		background-repeat: no-repeat, repeat;
+		background-position-y:553px;
+		background-position-x:5px;
+
+		box-shadow: -5px 0 15px -5px rgba(123, 115, 233, 0.6),5px 0 15px -5px rgba(123, 115, 233, 0.6),inset 0 5px 5px -5px rgba(0,0,0,0.4);
+		border-left:ridge 12px rgba(0,0,0,0.1);
+		border-right:groove 12px rgba(0,0,0,0.1);
+		border-top:double 4px rgba(0,0,0,0.1);
+
+		--overlayH1: calc(var(--wrapperRoofvisPaginaH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+
+	}
+		
+	
+		
+	/* pagina titel */	
+	#sectionRoofvisPagina header h1
+	{
+		padding-top:80px;
+		margin-left:179px;
+		margin-bottom:75px;
+		border-bottom: ridge 10px rgba(137, 143, 231, 0.75);
+		float:left;
+	}
+
+	
+	
+	/* vechtjassen graphic */
+	#sectionRoofvisPagina header img:nth-of-type(1)
+	{
+		padding-top:75px;
+		padding-left:150px;
+		opacity:0.2;
+		float:left;
+		filter:drop-shadow(1px 1px 3px rgba(60, 26, 122, 0.67));
+	}
+		
+	#sectionRoofvisPagina header img:nth-of-type(2)
+	{
+		padding-top:75px;
+		padding-left:167px;
+		opacity:0.2;
+		float:left;
+		filter:drop-shadow(1px 1px 3px rgba(60, 26, 122, 0.67));
+	}
+	
+	/* header paragraaf */
+	#sectionRoofvisPagina header p
+	{
+		padding-left:40px;
+		width:35%;
+		margin:0 auto;
+	}
+		
+	/* navigatie aanvullende afbeeldingen */
+	#sectionRoofvisPagina aside
+	{
+		width:700px;
+		height:300px;
+		box-shadow:0px 0px 2px 2px rgba(52, 35, 116, 0.75);
+		border:solid 2px #5844c8;
+		outline: solid 1px rgba(200, 255, 0, 0.37);
+		margin-left:125px;
+		margin-right:110px;
+		margin-top:100px;
+		display:block;
+		float:left;
+	}
+	
+	/* aside : iframe */
+	#sectionRoofvisPagina aside iframe
+	{
+		width:700px;
+		height:300px;
+		border:none;
+	}
+		
+
+	/* navigatie begeleidende text */
+	#sectionRoofvisPagina article:first-of-type
+	{
+		width:300px;
+		height:300px;
+		background-color:#295bbb;
+		box-shadow:0px 0px 2px 2px rgba(52, 35, 116, 0.75);
+		border:solid 2px #69587c;
+		outline: solid 1px rgba(200, 255, 0, 0.3);
+		margin-top:100px;
+		display:block;
+		float:left;
+	}
+	
+	/* text : iframe */
+	#sectionRoofvisPagina article:first-of-type iframe
+	{
+		width:300px;
+		height:300px;
+		border:none;
+	}
+		
+
+	/* nav menu positionering */
+	#sectionRoofvisPagina nav div:first-of-type
+	{
+		margin-left:125px;
+	}
+	
+	/* navigatie menu button styling */
+	#sectionRoofvisPagina nav div
+	{
+		width:175px;
+		height:75px;
+		background-color:#293178;
+		box-shadow:1px 1px 2px gray;
+		display:block;
+		float:left;
+		margin-top:100px;
+		margin-right:50px;
+		border:solid 2px #556edb;
+		box-sizing: border-box;
+		transition: border-color 1s ease-in;
+	}
+	
+
+	.disabled 
+	{
+		pointer-events: none;  /* <----------- */
+	}
+
+	
+
+
+	/* navigatie menu button hover state*/
+	#sectionRoofvisPagina div:hover
+	{
+		transition: border-color 1s ease-out; 
+		border:outset 2px #44d9bd;
+		box-shadow:1px 1px 4px gray;
+		cursor: pointer;
+	}
+		
+	/* navigatie menu link styling */
+	#sectionRoofvisPagina div a
+	{
+		width:175px;
+		height:75px;
+		display:block;
+		float:left;
+	
+
+		font-family: 'Varela Round', sans-serif;
+		font-size: 1.3em;
+		letter-spacing:0.1em;
+		text-decoration: none;
+		font-weight: bolder;
+		text-shadow:1px 1px 1px rgba(0,255,255,0.35);
+		filter:drop-shadow(1px 1px 1px darkslateblue);
+
+		text-align: center;
+		font-weight: bolder;
+		text-decoration: none;
+		color:#44d9bd;
+		padding-top:25px;
+	}
+			
+		
+	/* navigatie menu button underline styling */
+	#sectionRoofvisPagina div a .actief
+	{
+		color:#96f4ff;
+		padding-bottom:10px;
+		background-image:url("../images/roofvisPagina/buttonBottomBorder.png");
+		background-size: 51px 8px;
+		background-repeat: repeat-x;
+		background-position: bottom;
+		text-shadow:2px 2px black;
+	}
+		
+		
+	/* underline onzichtbaar styling*/
+	#sectionRoofvisPagina div a #baarsButton
+	{
+		background-size: 0px 0px;
+		text-shadow:0px 0px;
+	}
+		
+	#sectionRoofvisPagina div a #snoekbaarsButton
+	{
+		background-size: 0px 0px;
+		text-shadow:0px 0px;
+	}
+		
+	#sectionRoofvisPagina div a #meervalButton
+	{
+		background-size: 0px 0px;
+		text-shadow:0px 0px;
+	}
+		
+	
+	#sectionRoofvisPagina article:nth-of-type(2)
+	{
+		margin-top:125px;
+		margin-left:125px;
+		width:80%;
+		height:200px;
+		float:left;
+	}
+		
+	#sectionRoofvisPagina article:nth-of-type(2) p
+	{
+		padding-top:25px;
+		padding-left:4px;
+	}
+		
+	/* kop laatste paragraaf */
+	#sectionRoofvisPagina article:nth-of-type(2) header .kop
+	{
+		margin-top:75px;
+		padding-bottom:10px;
+	}
+	
+	/* ochtendgloren graphic */
+	#sectionRoofvisPagina article:nth-of-type(2) img
+	{
+		padding-top:100px;
+		display:block;
+		margin:0 auto;
+		opacity:0.8;
+	}
+		
+	/* pagina vullende (horizontaal) wrapper */		
+	#wrapperRoofvisPagina_Snoek
+	{
+		width:100%;
+		height:1685px;
+		--wrapperRoofvisPagina_SnoekH:1685px;
+		background-color:#2963bb;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);		
+		box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
+
+		
+		--overlayH1: calc(var(--wrapperRoofvisPagina_SnoekH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+	}
+
+	/* pagina vullende (horizontaal) wrapper */		
+	#wrapperRoofvisPagina_Baars
+	{
+		width:100%;
+		height:1625px;
+		--wrapperRoofvisPagina_BaarsH:1625px;
+		background-color:#2963bb;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);		
+		box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
+
+		--overlayH1: calc(var(--wrapperRoofvisPagina_BaarsH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+	}
+	
+	/* pagina vullende (horizontaal) wrapper */	
+	#wrapperRoofvisPagina_Snoekbaars
+	{
+		width:100%;
+		height:1655px;
+		--wrapperRoofvisPagina_SnoekbaarsH:1655px;
+		background-color:#2963bb;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);		
+		box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
+
+		--overlayH1: calc(var(--wrapperRoofvisPagina_SnoekbaarsH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+	}
+
+	/* pagina vullende (horizontaal) wrapper */	
+	#wrapperRoofvisPagina_Meerval
+	{
+		width:100%;
+		height:1655px;
+		--wrapperRoofvisPagina_MeervalH:1655px;
+		background-color:#2963bb;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);		
+		box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
+
+		--overlayH1: calc(var(--wrapperRoofvisPagina_MeervalH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+	}
+	
+	/* sub pagina (Template: verschillende soorten) */
+	.sectionRoofvisPagina_Template
+	{
+		width:1330px;
+		padding-bottom:100px;
+		margin:0 auto;
+		background-color:#2768bd;
+		background-image:url(../images/achtergrondPatroonSVtXIII.png);
+	
+		box-shadow: -5px 0 15px -5px rgba(123, 115, 233, 0.6),5px 0 15px -5px rgba(123, 115, 233, 0.6),inset 0 5px 5px -5px rgba(0,0,0,0.4);
+		border-left:ridge 12px rgba(0,0,0,0.1);
+		border-right:groove 12px rgba(0,0,0,0.1);
+		border-top:double 4px rgba(0,0,0,0.1);
+	}
+		
+	.sectionRoofvisPagina_Template header h1
+	{
+		padding-top:80px;
+		margin-left:130px;
+		margin-bottom:50px;
+		display:inline-block;
+	}
+		
+	.sectionRoofvisPagina_Template header h2
+	{
+		padding-left:128px;
+		padding-top:15px;
+	}
+
+	
+	
+	.sectionRoofvisPagina_Template header img
+	{
+		margin-left:590px;
+		filter:drop-shadow(1px 1px 1px rgba(0,0,255,0.5));
+		opacity:0.68;
+	}
+	
+		
+	/* soort bijschrift (bijnaam) */
+	.sectionRoofvisPagina_Template header .subText
+	{
+		color:#fd96ec;
+		font-style:italic;
+		display:block;
+		padding-left:1115px;
+		margin-top:-50px;
+		font-family: "Aquawax-Medium",Sans-Serif;
+		font-size:1.1em;
+		letter-spacing: 0.075em;
+		position:absolute;
+		text-decoration: underline;
+		text-underline-offset: 10px;
+		text-decoration-thickness: 4px;
+		text-decoration-style:wavy;
+		text-decoration-color: rgba(0,0,0,0.14);
+		
+	}
+
+	.sectionRoofvisPagina_Template header .subText .firstLetter
+	{
+		font-weight:bolder;
+		font-size:1.125em;
+	}
+		
+	.sectionRoofvisPagina_Template article p:first-child
+	{
+		padding-left:135px;
+		padding-top:40px;
+		padding-bottom:50px;
+		width:75%;
+	}
+	
+	/* youtube clip bijschrift */
+	.sectionRoofvisPagina_Template .videoBijschrift
+	{
+		font-family: "Aquawax-Medium",Sans-Serif;
+		font-size:1.5em;
+		letter-spacing: 0.045em;
+		color:#44e1dc;
+		text-shadow:1px 1px 3px rgba(0,0,0,0.25);
+		display:block;
+		margin-left:520px;
+		position:absolute;
+		margin-top:-40px;
+		background-image:url("../images/roofvisPagina/video-icon.png");
+		background-repeat:no-repeat;
+		background-position: left bottom;
+		padding-left:75px;
+	}
+		
+	.sectionRoofvisPagina_Template img
+	{
+		padding-top:75px;
+
+	}
+	
+	/* iframe youtube video */
+	.sectionRoofvisPagina_Template iframe
+	{
+		width:600px;
+		height:350px;
+		position:absolute;
+		margin-left:220px;
+		margin-top:110px;
+		border:double 4px rgba(68,217,189,0.5);
+		box-shadow:0px 0px 2px 2px rgba(0,0,0,0.42), -1px -1px 2px green,1px 1px 2px green;
+		background-image:url('../images/pC.png');
+		outline:double 3px rgba(221, 160, 221, 0.35);
+	}
+		
+	.sectionRoofvisPagina_Template section
+	{
+		padding-top:30px;
+	}
+		
+	
+	.sectionRoofvisPagina_Template section span:nth-child(4)
+	{
+		margin-left:1060px;
+		padding-top:30px;
+		display:inline-block;
+
+			
+	}
+		
+	/* sub link */	
+	.sectionRoofvisPagina_Template section span:nth-child(4) a
+	{
+			
+		border:double #66c8cc 3px;
+
+		font-family: 'Varela Round', sans-serif;
+		font-size: 0.9em;
+		letter-spacing:0.025em;
+		text-decoration: none;
+		font-weight: lighter;
+		text-shadow:1px 1px 1px rgba(0,0,0,0.5);
+
+		background-image:url('../images/achtergrondPatroonSV2-BxFPs.png'),linear-gradient(rgba(0, 0, 139, 0.096),rgba(255, 218, 185, 0.378));
+		padding:8px;
+		border-radius: 5px;
+		text-decoration: none;
+		background-color:#c44240;
+		box-shadow:1px 1px 1px rgba(0,0,0,0.5);
+		color:white;
+		opacity:0.75;
+		transition: opacity 0.4s ease;
+		margin-left:7px;
+
+		filter:hue-rotate(240deg);
+		filter:drop-shadow(1px 1px 1px darkslateblue);
+		
+	}
+	
+	/* sub link hover state*/	
+	.sectionRoofvisPagina_Template section span:nth-child(4) a:hover
+	{
+		text-decoration: underline;
+		text-underline-offset: 4px;
+		text-decoration-thickness: 1px;
+		text-decoration-color: rgba(255,255,255,0.50);
+		text-decoration-style: double;
+		opacity:0.93;
+		transition: opacity 0.4s ease;
+	}
+	
+		
+	.sectionRoofvisPagina_Template section article:first-child
+	{
+		margin-left:125px;
+	}
+		
+	.sectionRoofvisPagina_Template section article
+	{
+		width:300px;
+		height:255px;
+		background-color:#295bbb;
+		display:block;
+		float:left;
+		margin-right:55px;
+		margin-bottom:30px;
+		padding:20px;
+		opacity:1;
+		z-index:1;
+		position: relative;
+		outline:3px double rgba(255, 218, 185, 0.37);
+		box-shadow:-1px -1px 0px 0px yellowgreen, 1px 1px 0px 0px greenyellow,0px 5px 0px 0px rgba(76, 73, 233, 0.603) ,0px 13px 0px 0px #5888b69c, 0px 13px 0px 4px rgba(216, 191, 216, 0.144), 0px 16px 0px 4px #4c51ff, 0px 17px 0px 4px rgba(85, 107, 47, 0.158),0px 19px 2px 3px rgba(180, 230, 255, 0.25) ;
+		border:ridge 1px blue;
+		border-top:dashed 2px rgba(165, 42, 42, 0.45);
+		filter:drop-shadow(0px 1px 1px rgba(99, 8, 58, 0.3));
+		opacity:0.8;
+	}
+
+	.sectionRoofvisPagina_Template section article section
+	{
+		width:340px;
+		height:263px;
+		margin-top:-253px;
+		margin-left:-23px;
+		position:absolute;
+		display:block;
+		z-index:-1;
+		float:left;
+		background-color:#295bbb;
+		box-shadow:0px 0px 2px 2px rgba(119, 255, 237, 0.725), -3px -3px 1px 1px rgba(0, 0, 0, 0.3);
+		border:groove 3px rgba(240, 169, 250, 0.753);
+		outline:2px solid palegreen;
+		filter:drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.42));
+		background-image: linear-gradient(to right,rgba(135, 235, 160, 0.42),rgba(23, 151, 81, 0.24)), url("../images/achtergrondPatroonSV3t.png"),url("../images/achtergrondPatroon2.png"),url("../images/pointert.png");
+		opacity:0.26;
+		filter:hue-rotate(80deg);
+	}
+
+	.sectionRoofvisPagina_Template section article:nth-child(2) section
+	{
+		margin-top:-279px;
+	}
+
+	.sectionRoofvisPagina_Template section article:nth-child(3) section
+	{
+		margin-top:-279px;
+	}
+
+
+
+		
+	.sectionRoofvisPagina_Template section article header h3
+	{
+		font-size:1.5em;
+		letter-spacing: 0.025em;
+		color:rgb(66, 1, 187);
+		opacity:0.75;
+		font-weight:500;
+		text-shadow:1px 1px 3px rgba(199, 74, 101, 0.753);
+		text-decoration: underline;
+		text-decoration-color: #3939b6e0;
+		text-underline-position: under;
+		text-underline-offset: 4px;
+		text-decoration-thickness: 3px;
+		text-align: center;
+	}
+
+
+
+	.sectionRoofvisPagina_Template section article p
+	{
+		padding-top:25px;
+		padding-left:15px;
+		font-size:1.25em;
+		text-shadow:1px 1px 2px rgba(0,0,0,0.5);
+		color:rgba(202, 240, 255, 0.73);
+	}
+	
+	/* feitjes */
+	.sectionRoofvisPagina_Template section article table
+	{
+		font-family: "Aquawax-Medium",Sans-Serif;
+		font-size:1.25em;
+		text-shadow:1px 1px 2px rgba(0,0,0,0.37);
+		color:rgba(199, 74, 182, 0.685);
+		margin-left:25px;
+		margin-top:7px;
+	}
+		
+	/* informatie blokken */	
+	.sectionRoofvisPagina_Template section article table td:nth-child(1)
+	{
+		font-size:0.9em;
+	}
+
+	.sectionRoofvisPagina_Template section article table td:nth-child(2)
+	{
+		padding-left:13px;
+	}
+
+	.sectionRoofvisPagina_Template section article table td:nth-child(1)::first-letter
+	{
+		font-weight:bolder;
+		color:#e39cff;
+	}
+		
+	.sectionRoofvisPagina_Template section article table td:nth-child(2)
+	{
+		color:rgba(183, 233, 253, 0.73);
+	}
+		
+	.sectionRoofvisPagina_Template section article table td
+	{
+		padding-top:30px;
+		padding-right:18px;
+	}
+		
+		
+	
+	
+
+		
+	/* pagina vullende (horizontaal) wrapper */	
+	#wrapperinBeeld_Luik1Pagina
+	{
+		width:100%;
+		--wrapperLuik1PaginaH:944px;
+		background-color:#244ccf;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);		
+		box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
+	}
+	
+	/* avontuur in beeld (drieluik) */		
+	#sectioninBeeld_Luik1Pagina
+	{
+		width:1330px;
+		height:940px;
+		margin:0 auto;
+		background-color:#2768bd;
+		box-shadow: -5px 0 15px -5px rgba(123, 115, 233, 0.6),5px 0 15px -5px rgba(123, 115, 233, 0.6),inset 0 5px 5px -5px rgba(0,0,0,0.4);
+		border-left:ridge 12px rgba(0,0,0,0.1);
+		border-right:groove 12px rgba(0,0,0,0.1);
+		border-top:double 4px rgba(0,0,0,0.1);
+
+		--overlayH1: calc(var(--wrapperLuik1PaginaH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+
+		background-image:url(../images/achtergrondPatroonSVtXIII.png);
+
+		
+	}
+		
+	#sectioninBeeld_Luik1Pagina header h1
+	{
+		padding-top:80px;
+		margin-left:130px;
+	}
+	
+	/* sub header (soort latijnse naam) */
+	#sectioninBeeld_Luik1Pagina header h2
+	{
+		padding-left:125px;
+		padding-top:35px;
+	}
+		
+
+	/* pagina vullende (horizontaal) wrapper */		
+	#wrapperinBeeld_Luik2Pagina
+	{
+		width:100%;
+		--wrapperLuik2PaginaH:944px;
+		background-color:#244ccf;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);		
+		box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
+	
+	}
+	
+	/* avontuur in beeld (drieluik) */		
+	#sectioninBeeld_Luik2Pagina
+	{
+		width:1330px;
+		height:940px;
+		margin:0 auto;
+		background-color:#2768bd;
+
+		box-shadow: -5px 0 15px -5px rgba(123, 115, 233, 0.6),5px 0 15px -5px rgba(123, 115, 233, 0.6),inset 0 5px 5px -5px rgba(0,0,0,0.4);
+		border-left:ridge 12px rgba(0,0,0,0.1);
+		border-right:groove 12px rgba(0,0,0,0.1);
+		border-top:double 4px rgba(0,0,0,0.1);
+
+		--overlayH1: calc(var(--wrapperLuik2PaginaH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+
+		background-image:url(../images/achtergrondPatroonSVtXIII.png);
+	}
+	
+	/* h1 header, styling h2 header luik1 */
+	#sectioninBeeld_Luik2Pagina header h1
+	{
+		font-size:2.5em;
+		letter-spacing: 0.075em;
+		text-shadow:2px 2px 2px rgba(0,0,0,0.25);
+		padding-left:125px;
+		padding-top:80px;
+		color:#5aba47;
+		font-style: oblique;
+		border-bottom: none;
+	}
+		
+	#sectioninBeeld_Luik2Pagina img
+	{
+		padding-top:200px;
+		padding-left:150px;
+	}
+	
+	/* pagina vullende (horizontaal) wrapper */		
+	#wrapperinBeeld_Luik3Pagina
+	{
+		width:100%;
+		--wrapperLuik3PaginaH:979px;
+		background-color:#244ccf;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);		
+		box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
+	}
+		
+	/* avontuur in beeld (drieluik) */		
+	#sectioninBeeld_Luik3Pagina
+	{
+		width:1330px;
+		height:975px;
+		margin:0 auto;
+		background-color:#2768bd;
+		box-shadow: -5px 0 15px -5px rgba(123, 115, 233, 0.6),5px 0 15px -5px rgba(123, 115, 233, 0.6),inset 0 5px 5px -5px rgba(0,0,0,0.4);
+		border-left:ridge 12px rgba(0,0,0,0.1);
+		border-right:groove 12px rgba(0,0,0,0.1);
+		border-top:double 4px rgba(0,0,0,0.1);
+
+		--overlayH1: calc(var(--wrapperLuik3PaginaH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+
+		background-image:url("../images/inbeeldPagina/drieluik-snoekbaars-esox-lucius.png"),url(../images/achtergrondPatroonSVtXIII.png); background-repeat:no-repeat,repeat;
+		background-position: 0px 35px;
+	}
+	
+	/* h1 header, styling h2 header luik1 */
+	#sectioninBeeld_Luik3Pagina header h1
+	{
+		font-size:2.5em;
+		letter-spacing: 0.075em;
+		text-shadow:2px 2px 2px rgba(0,0,0,0.25);
+		padding-left:125px;
+		padding-top:80px;
+		color:#5aba47;
+		font-style: oblique;
+		border-bottom: none;
+	}
+		
+	/* styling uitnodiging avontuur paragraaf */
+	#sectioninBeeld_Luik3Pagina  article p:first-child
+	{
+		padding-top:50px;
+	}
+		
+	#sectioninBeeld_Luik3Pagina  article p
+	{
+		padding-top:25px;
+		padding-left:125px;
+		font-family: "Aquawax-Medium",Sans-Serif;
+		font-size:1.25em;
+		letter-spacing: 0.025em;
+		line-height: 1.3;
+		text-shadow:2px 2px 2px rgba(0,0,0,0.25); 
+		color:rgb(215, 230, 240);
+		width:80%;
+	}
+	
+	/* sub link */
+	#sectioninBeeld_Luik3Pagina article .ftLink
+	{
+		margin-left:125px;
+		padding-top:20px;
+		display:inline-block;
+		position:relative;
+
+	}
+
+			
+	#sectioninBeeld_Luik3Pagina article .ftLink a
+	{
+
+
+		border:double #66c8cc 3px;
+
+		font-family: 'Varela Round', sans-serif;
+		font-size: 0.9em;
+		letter-spacing:0.025em;
+		text-decoration: none;
+		font-weight: lighter;
+		text-shadow:1px 1px 1px rgba(0,0,0,0.5);
+		display:block;
+		background-image:url('../images/achtergrondPatroonSV2-BxFPs.png'),linear-gradient(rgba(0, 0, 139, 0.096),rgba(255, 218, 185, 0.378));
+		padding:10px;
+		padding-bottom:8px;
+		border-radius: 5px;
+		text-decoration: none;
+		background-color:#c44240;
+		box-shadow:1px 1px 1px rgba(0,0,0,0.5);
+		color:white;
+		opacity:0.75;
+		transition: opacity 0.4s ease;
+		margin-left:7px;
+		margin-bottom:20px;
+		filter:hue-rotate(240deg);
+		filter:drop-shadow(1px 1px 1px darkslateblue);
+	}
+			
+	#sectioninBeeld_Luik3Pagina article .ftLink a:hover
+	{
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		text-decoration-thickness: 2px;
+		text-decoration-color: rgba(255,255,255,0.50);
+		text-decoration-style: double;
+		opacity:1;
+		transition: opacity 0.4s ease;
+	}
+		
+	#sectioninBeeld_Luik3Pagina img
+	{
+		padding-left:950px;
+		margin-top:-180px;
+		position: static;
+	
+	}
+	
+
+		
+		
+	/* pagina vullende (horizontaal) wrapper */		
+	#wrapperinBeeld_GallerijPagina
+	{
+		width:100%;
+		--wrapperinBeeld_GallerijPaginaH:1024px;
+		background-color:#244ccf;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);		
+		box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
+	}
+	
+	/* sub pagina (Gallerij (onder drieluik) ) */
+	#sectioninBeeld_GallerijPagina
+	{
+		width:1330px;
+		height:1020px;
+		margin:0 auto;
+		background-color:#2768bd;
+		background-image:url("../images/inbeeldPagina/gallerij/gallerij-achtergrond.png"),url(../images/achtergrondPatroonSVtXIII.png);
+		background-position: 725px 53px;
+		background-repeat: no-repeat, repeat;
+
+		box-shadow: -5px 0 15px -5px rgba(123, 115, 233, 0.6),5px 0 15px -5px rgba(123, 115, 233, 0.6),inset 0 5px 5px -5px rgba(0,0,0,0.4);
+		border-left:ridge 12px rgba(0,0,0,0.1);
+		border-right:groove 12px rgba(0,0,0,0.1);
+		border-top:double 4px rgba(0,0,0,0.1);
+
+		--overlayH1: calc(var(--wrapperinBeeld_GallerijPaginaH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+	}
+		
+	#sectioninBeeld_GallerijPagina header
+	{
+		float: left;
+	}
+		
+	#sectioninBeeld_GallerijPagina header h1
+	{
+		padding-top:80px;
+		margin-left:130px;
+	}
+	
+
+	#sectioninBeeld_GallerijPagina header h2
+	{
+		padding-left:125px;
+		padding-top:35px;
+	}
+	
+	/* Gallerij, selectie menu */
+	#sectioninBeeld_GallerijPagina aside
+	{
+		float: right;	
+	}
+	
+	#sectioninBeeld_GallerijPagina aside nav
+	{
+		margin-top:138px;
+		margin-right:100px;
+		width:200px;
+	}
+	
+	/* styling selectie menu */	
+	#sectioninBeeld_GallerijPagina aside nav div
+	{
+		width:198px;
+		height:148px;
+		background-color:#4c51ff;
+		margin-top:40px;
+		background-repeat: no-repeat;
+		border:inset 4px rgba(208, 178, 255,0.55);
+		box-shadow:0px 0px 2px 2px rgba(0,0,0,0.3);
+		/*transition: border-color 2s ease-in;*/
+		outline:solid 1px rgba(218, 165, 32, 0.5);
+	}
+	
+	/* selectie */
+	#sectioninBeeld_GallerijPagina aside nav div:first-child
+	{
+		border:inset 3px rgb(166, 119, 255);
+		box-shadow:0px 0px 1px 2px rgba(0,0,0,0.5);
+		outline:solid 1px rgba(218, 165, 32, 0.5);
+	}
+	
+
+	
+	#sectioninBeeld_GallerijPagina aside nav div a
+	{
+		width:198px;
+		height:148px;
+		display:block;
+	}
+	
+	/* thumb afbeeldingen */
+	#sectioninBeeld_GallerijPagina aside nav div:nth-child(1)
+	{
+		background-image:url("../images/inbeeldPagina/gallerij/thumb/thumb-1.png");
+	}
+	
+	#sectioninBeeld_GallerijPagina aside nav div:nth-child(2)
+	{
+		background-image:url("../images/inbeeldPagina/gallerij/thumb/thumb-2.png");
+	}
+		
+	#sectioninBeeld_GallerijPagina aside nav div:nth-child(3)
+	{
+		background-image:url("../images/inbeeldPagina/gallerij/thumb/thumb-3.png");
+	}
+		
+	#sectioninBeeld_GallerijPagina aside nav div:nth-child(4)
+	{
+		background-image:url("../images/inbeeldPagina/gallerij/thumb/thumb-4.png");
+	}
+		
+	/* iframe, weergave afbeeldingen uit gallerij */	
+	#sectioninBeeld_GallerijPagina iframe
+	{
+		width:775px;
+		height:525px;
+		margin-top:335px;
+		margin-left:-410px;
+		box-shadow:0px 0px 4px 2px rgba(42, 17, 133, 0.5);
+		border:double 10px rgba(150, 155, 228, 0.75);
+		background-image:url("../images/inbeeldPagina/gallerij/achtergrond-iframe.png");
+		background-repeat: no-repeat;
+	}
+		
+	
+	/* pagina vullende (horizontaal) wrapper */
+	#wrapperTechniekenPagina
+	{
+		width:100%;
+		height:2628px;
+		--wrapperTechniekenPaginaH:2628px;
+		background-color:#2b65e2;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);		
+		box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
+	}
+		
+	/* sub pagina (Technieken & materialen) */
+	#sectionTechniekenPagina
+	{
+		width:1330px;
+		padding-bottom:100px;
+		margin:0 auto;
+		background-color:#2768bd;
+
+		box-shadow: -5px 0 15px -5px rgba(123, 115, 233, 0.6),5px 0 15px -5px rgba(123, 115, 233, 0.6),inset 0 5px 5px -5px rgba(0,0,0,0.4);
+		border-left:ridge 12px rgba(0,0,0,0.1);
+		border-right:groove 12px rgba(0,0,0,0.1);
+		border-top:double 4px rgba(0,0,0,0.1);
+
+		--overlayH1: calc(var(--wrapperTechniekenPaginaH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+
+		background-image:url(../images/pPr.png),url(../images/achtergrondPatroonSVtXIII.png);
+		background-repeat:no-repeat, repeat;
+		background-position: 935px 1000px;
+	}
+		
+	#sectionTechniekenPagina header h1
+	{
+		padding-top:80px;
+		margin-left:130px;
+	}
+	
+
+	#sectionTechniekenPagina header h2
+	{
+		padding-left:125px;
+		padding-top:35px;
+		padding-bottom:50px;
+		background-image: url('../images/techniekenPagina/stp.png');
+		background-repeat: no-repeat;
+		background-position-x: 920px;
+		background-position-y: 35px;
+	}
+	
+
+	#sectionTechniekenPagina article
+	{
+		float:left;
+		display:inline-block;
+		width:60%;
+	}
+		
+	#sectionTechniekenPagina article p
+	{
+		padding-left:135px;
+		padding-top:50px;
+		float:left;
+		display:block;
+	}
+
+
+	#sectionTechniekenPagina article:nth-of-type(1) p:nth-child(1)
+	{
+		
+		background-image:url(../images/pP.png);
+		background-repeat: no-repeat;
+		background-position: 40px 43px;
+		filter:drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.25));
+	}
+
+	#sectionTechniekenPagina article:nth-of-type(2) p:nth-child(2),
+	#sectionTechniekenPagina article:nth-of-type(3) p:nth-child(2)
+	{
+		
+		background-image:url(../images/pP.png);
+		background-repeat: no-repeat;
+		background-position: 40px 3px;
+		filter:drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.25));
+	}
+	
+
+	
+	#sectionTechniekenPagina article:nth-of-type(2),
+	#sectionTechniekenPagina article:nth-of-type(3)
+	{
+		width:70%;
+		margin-left:150px;
+		display:block;
+	}
+		
+	#sectionTechniekenPagina article:nth-of-type(2) p,
+	#sectionTechniekenPagina article:nth-of-type(3) p	
+	{
+		padding-top:10px;
+		padding-bottom:50px;
+		width:90%;
+	}
+	
+	#sectionTechniekenPagina article:nth-of-type(2) p:last-child,
+	#sectionTechniekenPagina article:nth-of-type(3) p:last-child	
+	{
+		padding-bottom:75px;
+	}
+		
+	#sectionTechniekenPagina h3
+	{
+		padding-top:100px;
+		padding-left:135px;
+		text-align: center;
+	}
+		
+	#sectionTechniekenPagina #imageOutline
+	{
+		float:left;
+		margin-left:125px;
+		margin-top:-25px;
+		padding-left:50px;
+		border-left: double 6px rgba(225, 68, 107, 0.3);
+		border-top: double 6px rgba(187, 81, 230, 0.5);
+		box-shadow:-1px 0px 0px 0px rgba(255, 155, 255, 0.25);
+		
+	}
+		
+
+	#sectionTechniekenPagina #footerArticle
+	{
+		width:60%;
+		margin-top:3px;
+		margin-left:130px;
+		border-bottom: double 6px rgba(225, 68, 102, 0.3);
+		box-shadow:0px 1px 0px 0px rgba(216, 191, 216, 0.17);
+		float:left;
+	}
+		
+	#sectionTechniekenPagina .streepHorizontaal1,
+	#sectionTechniekenPagina .streepHorizontaal2
+	{
+		margin-left:275px;
+	}
+		
+
+	#sectionTechniekenPagina .kunstaasSelectie
+	{
+		width:inherit;
+		height:200px;
+		display:inline-block;
+		margin:0 auto;
+		margin-top:80px;
+
+	}
+		
+	#sectionTechniekenPagina .kunstaasSelectie img:first-of-type
+	{
+		filter:drop-shadow(-2px 2px 3px rgba(0,0,255,0.75));
+		margin-left:125px;
+	}
+
+	#sectionTechniekenPagina .kunstaasSelectie img:nth-child(2),
+	#sectionTechniekenPagina .kunstaasSelectie img:nth-child(3),
+	#sectionTechniekenPagina .kunstaasSelectie img:nth-child(4)
+	{
+		filter:drop-shadow(-2px 2px 3px rgba(0,0,255,0.75));
+		margin-left:45px;
+	}
+		
+	#sectionTechniekenPagina .kunstaasSelectie img
+	{
+		margin-right:80px;
+	}
+
+	#sectionTechniekenPagina .kunstaasBeschrijving
+	{
+		float:left;
+		padding-left:185px;
+		padding-top:25px;
+		opacity:0.75;
+	}
+	
+	#sectionTechniekenPagina div figure:first-of-type
+	{
+		padding-top:45px;
+	}
+		
+	
+	#sectionTechniekenPagina div figure
+	{
+		padding-left:15px;
+		padding-bottom:100px;
+	}
+		
+	#sectionTechniekenPagina div figure img
+	{
+		margin: 0 auto;
+		display:block;
+		filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.75));
+	}
+		
+	/* figure sub titels */
+	#sectionTechniekenPagina div figure figcaption
+	{
+		padding-top:25px;
+		font-family: "FuturaBT-Medium",Sans-Serif;
+		font-size:1.25em;
+		letter-spacing: 0.025em;
+		text-shadow:2px 2px 4px rgba(0,0,0,0.25);
+		color:#afc673;
+		text-align: center;
+	}	
+		
+
+
+		
+		
+		
+	/* pagina vullende (horizontaal) wrapper */	
+	#wrapperStekkenPagina
+	{
+		width:100%;
+		height:3070px;
+		--wrapperStekkenPaginaH:3070px;
+		background-color:#325dd3;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);		
+		box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
+	}
+	
+	/* sub pagina (Stekken & vergunningen) */	
+	#sectionStekkenPagina
+	{
+		width:1330px;
+		margin:0 auto;
+		background-color:#2768bd;
+		background-image:url(../images/achtergrondPatroonSVtXIII.png);
+		box-shadow: -5px 0 15px -5px rgba(123, 115, 233, 0.6),5px 0 15px -5px rgba(123, 115, 233, 0.6),inset 0 5px 5px -5px rgba(0,0,0,0.4);
+		border-left:ridge 12px rgba(0,0,0,0.1);
+		border-right:groove 12px rgba(0,0,0,0.1);
+		border-top:double 4px rgba(0,0,0,0.1);
+
+		--overlayH1: calc(var(--wrapperStekkenPaginaH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+
+		background-repeat: repeat;
+	}
+		
+	#sectionStekkenPagina header h1
+	{
+		padding-top:80px;
+		margin-left:130px;
+	}
+	
+	#sectionStekkenPagina header h2
+	{
+		padding-left:125px;
+		padding-top:35px;
+	}
+
+	#sectionStekkenPagina article
+	{
+		padding-top:125px;
+	}
+		
+	#sectionStekkenPagina article:first-of-type p:first-child
+	{
+		padding-top:75px;
+	}
+		
+	#sectionStekkenPagina article:first-of-type p:nth-of-type(2),
+	#sectionStekkenPagina article:first-of-type p:nth-of-type(4)
+	{
+		padding-left:135px;
+	}
+		
+	#sectionStekkenPagina article:first-of-type p
+	{	
+		padding-bottom:145px;
+		width:90%;
+	}
+		
+	#sectionStekkenPagina article:first-of-type p:nth-of-type(2),
+	#sectionStekkenPagina article:first-of-type p:nth-of-type(3),
+	#sectionStekkenPagina article:first-of-type p:nth-of-type(4)
+	{
+		padding-top:45px;	
+	}
+	
+	#sectionStekkenPagina article:first-of-type figure:nth-of-type(2),
+	#sectionStekkenPagina article:first-of-type figure:nth-of-type(3),
+	#sectionStekkenPagina article:first-of-type figure:nth-of-type(4)
+	{
+		padding-top:45px;	
+	}
+
+	#sectionStekkenPagina article:first-of-type figure:nth-of-type(3)
+	{
+		padding-bottom:45px;
+	}
+		
+	
+	#sectionStekkenPagina article:first-of-type figure img
+	{
+		border:groove 6px rgba(120, 68, 217, 0.5);
+		box-shadow:0px 0px 2px 2px rgba(0,0,0,0.4);
+	}
+
+	#sectionStekkenPagina article:first-of-type figure:nth-of-type(2) img,
+	#sectionStekkenPagina article:first-of-type figure:nth-of-type(4) img
+	{
+		border-color:rgba(113, 177, 184, 0.5);
+	}
+
+
+	
+	/* uitlijning figure elementen (afbeeldignen) */
+	#sectionStekkenPagina article:first-of-type figure:nth-of-type(1),
+	#sectionStekkenPagina article:first-of-type figure:nth-of-type(3)	
+	{
+		float: left;
+		padding-left:135px;
+		padding-right:75px;
+		background-image: url(../images/stekkenPagina/bLc.png);
+		background-repeat: no-repeat;background-position: 55px 79px;
+	}
+
+	#sectionStekkenPagina article:first-of-type figure:nth-of-type(3)	
+	{
+		background-image: url(../images/stekkenPagina/bLc.png);
+		background-repeat: no-repeat;background-position: 55px 124px;
+	}
+	
+	#sectionStekkenPagina article:first-of-type figure:nth-of-type(2),
+	#sectionStekkenPagina article:first-of-type figure:nth-of-type(4)	
+	{
+		float: right;
+		padding-left:75px;
+		padding-right:75px;
+	}
+	
+	
+
+	/* figure sub titels */
+	#sectionStekkenPagina article:first-of-type figure figcaption
+	{
+		padding-top:25px;
+		font-family: "FuturaBT-Medium",Sans-Serif;
+		font-size:1.25em;
+		letter-spacing: 0.025em;
+		text-shadow:2px 2px 4px rgba(0,0,0,0.25);
+		color:#afc673;
+	}
+		
+	#sectionStekkenPagina article:nth-of-type(2)
+	{
+		margin-left:50px;
+	}
+		
+	/* header aanvullende text */
+	#sectionStekkenPagina article:nth-of-type(2) h3
+	{
+		padding-left:135px;
+	}
+		
+	#sectionStekkenPagina article:nth-of-type(2) p
+	{
+		padding-left:135px;
+		padding-bottom:50px;
+		width:75%;
+	}
+
+	#sectionStekkenPagina article:nth-of-type(2) p:nth-child(2),
+	#sectionStekkenPagina article:nth-of-type(2) p:nth-child(5)
+	{
+		
+		background-image:url(../images/pP.png);
+		background-repeat: no-repeat;
+		background-position: 40px -6px;
+		filter:drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.25));
+	}
+		
+	#sectionStekkenPagina article:nth-of-type(2) p:last-of-type
+	{
+		float:left;
+	}
+	
+		
+	/* afbeelding / link */
+	#sectionStekkenPagina article:nth-of-type(2) img
+	{
+		margin-left:140px;
+		margin-bottom:100px;
+		border:solid 2px black;
+	}
+		
+	#sectionStekkenPagina .streepHorizontaal1
+	{
+		margin-top:125px;
+		margin-left:185px;
+		width:975px;
+	}
+		
+	#sectionStekkenPagina .streepHorizontaal2
+	{
+		margin-left:185px;
+		margin-bottom:50px;
+		width:975px;
+	}
+		
+		
+		
+	/* pagina vullende (horizontaal) wrapper */		
+	#wrapperContactPagina
+	{
+		width:100%;
+		--wrapperContactPaginaH: 1333px;
+	
+		background-color:#2e6cc9;
+		background-image:url("../images/borderOverlapL0.png"),url("../images/borderOverlapLn.png"),url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondLinksN.png"),url("../images/achtergrondPatroon.png"),url("../images/achtergrondLinks.png"),url("../images/lA.png");
+		background-position-y: -2px,1px, 50px, 50px;
+		background-repeat: repeat-x,repeat-x, repeat, repeat, repeat, repeat, repeat;
+		border-top: double 4px rgba(49,123,191,1);		
+		box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
+	}
+	
+	/* sub pagina (Contact) */	
+	#sectionContactPagina
+	{
+		width:1330px;
+		height:1100px;
+		margin:0 auto;
+		background-color:#2768bd;
+
+		box-shadow: -5px 0 15px -5px rgba(123, 115, 233, 0.6),5px 0 15px -5px rgba(123, 115, 233, 0.6),inset 0 5px 5px -5px rgba(0,0,0,0.4);
+		border-left:ridge 12px rgba(0,0,0,0.1);
+		border-right:groove 12px rgba(0,0,0,0.1);
+		border-top:double 4px rgba(0,0,0,0.1);
+
+		--overlayH1: calc(var(--wrapperContactPaginaH) - 2px);
+		--overlayH2: calc(var(--overlayH1) - 50px);
+		--overlayH3: calc(var(--overlayH1) - 4px);
+
+		background-image: url("../images/contactPagina/contact-achtergrond.png"),url(../images/achtergrondPatroonSVtXIII.png);
+		background-position: right;
+		background-position-y: right;
+		background-repeat: no-repeat,repeat;
+	}
+	
+	#sectionContactPagina header h1
+	{
+		padding-top:80px;
+		margin-left:130px;
+	}
+	
+
+	#sectionContactPagina header h2
+	{
+		padding-left:125px;
+		padding-top:35px;
+	}
+	
+	/* Contact Formulier */
+	#sectionContactPagina section form
+	{
+		margin-left:130px;
+		margin-top:75px;
+	}
+	
+	/* omschrijving */
+	#sectionContactPagina section form label
+	{
+		font-family: "FuturaBT-Medium",Sans-Serif;
+		font-size:1.5em;
+		letter-spacing: 0.045em;
+		text-shadow:2px 2px 4px rgba(0,0,0,0.25);
+		color:peachpuff;
+		border-bottom:2px solid rgba(0,0,0,0.2);
+		padding-bottom:5px;
+	}
+		
+	/* tabel uitlijning formulier elementen */
+	#sectionContactPagina section form table td
+	{
+		padding-bottom:25px;
+	}
+	
+	
+	#sectionContactPagina section form table tr:nth-child(1) td:nth-child(2), 
+	#sectionContactPagina section form table tr:nth-child(2) td:nth-child(2), 
+	#sectionContactPagina section form table tr:nth-child(3) td:nth-child(2),
+    #sectionContactPagina section form table tr:nth-child(4) td:nth-child(2),
+	#sectionContactPagina section form table tr:nth-child(5) td:nth-child(2),
+	#sectionContactPagina section form table tr:nth-child(6) td:nth-child(2)
+	{
+		margin-left:65px;
+		display:block;
+	}
+	
+	#sectionContactPagina section form table tr:nth-child(5) td:nth-child(1)
+	{
+		vertical-align: middle;
+	}
+	
+	/* formulier velden */
+	#sectionContactPagina section form input
+	{
+		border:2px #44e1dc6e solid;
+		outline:solid 2px rgba(175, 238, 238, 0.514);
+
+		box-shadow:2px 2px 2px black;
+		height:45px;
+		width:300px;
+		font-family: "FuturaBT-Medium",Sans-Serif;
+		font-size:1.5em;
+		letter-spacing: 0.045em;
+		text-shadow:2px 2px 4px rgba(0,0,0,0.25);
+		padding:5px;
+		color:peachpuff;
+		background-color:inherit;
+		transition: border-color 1s ease-out;
+		box-sizing: border-box;
+		cursor: pointer;
+	}
+	
+	/* formulier selectie menu */
+	#sectionContactPagina section form select
+	{
+		width:300px;
+		height:45px;
+		font-family: "FuturaBT-Medium",Sans-Serif;
+		font-size:1.25em;
+		color:peachpuff;
+		letter-spacing: 0.045em;
+		text-shadow:2px 2px 4px rgba(0,0,0,0.25);
+		padding:5px;
+		background-color:inherit;
+		border:2px #44e1dc6e  solid;
+		outline:solid 2px rgba(175, 238, 238, 0.514);
+
+		box-shadow:2px 2px 2px black;
+		background-color:rgba(71, 61, 139, 0.637);
+	}
+	
+	/* verzend knop */
+	#sectionContactPagina section form .verzendButton
+	{
+		background-color:rgba(71, 61, 139, 0.637);
+	}
+	
+	/* bericht invoer */
+	#sectionContactPagina section form textarea
+	{
+		width:300px;
+		height:175px;
+		font-family: "FuturaBT-Medium",Sans-Serif;
+		font-size:1.5em;
+		color:peachpuff;
+		letter-spacing: 0.045em;
+		text-shadow:2px 2px 4px rgba(0,0,0,0.25);
+		padding:5px;
+		background-color:inherit;
+		border:2px #44e1dc6e  solid;
+		outline:solid 2px rgba(175, 238, 238, 0.514);
+
+		box-shadow:2px 2px 2px black;
+		resize:none;
+		box-sizing: border-box;
+	}
+	
+	/* styling actief onderdeel */
+	#sectionContactPagina section form input:hover,
+	#sectionContactPagina section form input:focus,
+	#sectionContactPagina section form select:hover,
+	#sectionContactPagina section form select:focus,
+	#sectionContactPagina section form textarea:hover,
+	#sectionContactPagina section form textarea:focus
+	{
+		border-color:rgba(176, 224, 230, 0.753);
+		border-width:3px;
+		transition: border-color 1s ease-in;
+	}
+
+
+	#sectionContactPagina section form input:not(:hover),
+	#sectionContactPagina section form select:not(:hover),
+	#sectionContactPagina section form textarea:not(:hover)
+	{
+		transition: 0.37s ease-out;
+	}
+
+
+	#sectionContactPagina section form input:hover,
+	#sectionContactPagina section form select:hover,
+	#sectionContactPagina section form textarea:hover
+	{
+		transition: 0.37s ease-out;
+		filter:blur(1px);
+	}
+
+	
+		
+	/* Footer onder contact pagina */	
+	#sectionFooter
+	{
+		width:1330px;
+		height:225px;
+		margin:0 auto;
+		background-color:#295bbb;
+		display:block;
+
+		position:relative;
+		opacity:0.75;
+	
+		box-shadow: -3px 0 12px -4px rgba(127, 14, 233,0.27),3px 0 12px -4px rgba(127, 14, 233,0.27),inset 0 5px 5px -5px rgba(109, 84, 84, 0.4);
+		border-left:double 9px rgba(0,0,0,0.1);
+		border-right:double 9px rgba(0,0,0,0.1);
+		border-top:dashed 1px rgba(201, 1, 219, 0.09);
+	}
+		
+	/* Titel plus Logo */	
+	#sectionFooter img:nth-child(1)
+	{
+		padding-top:65px;
+		padding-left:50px;
+		margin-right:75px;
+		float:left;
+	}
+	
+	/* social media */
+	#sectionFooter .instaIcon
+	{
+		padding-left:140px;
+		padding-right:50px;
+		padding-top:80px;
+	}
+		
+	#sectionFooter img:nth-of-type(2),
+	#sectionFooter img:nth-of-type(3)
+	{
+		opacity:0.5;	
+	}
+		
+	#sectionFooter img:nth-of-type(2):hover,
+	#sectionFooter img:nth-of-type(3):hover
+	{
+		cursor: pointer;
+		opacity:1;	
+	}
+	
+	/* footer navigatie */
+	#sectionFooter span
+	{
+		display:inline-block;
+		padding-top:40px;
+		margin-left:140px;
+		color:lightskyblue;
+		font-family: "FuturaBT-Medium",Sans-Serif;
+		font-size:1em;
+	}
+	
+	/* navigatie links */
+	#sectionFooter section ul
+	{
+		float:left;
+		padding:15px;
+		border-left:inset 6px rgba(0,0,0,0.25);
+		border-right:outset 6px rgba(0,0,0,0.25);
+		border-bottom:inset 6px rgba(0,0,0,0.35);
+		background-image: url("../images/achtergrondPatroonSV.png"),url("../images/achtergrondPatroonF.png");
+		box-shadow: 0px 2px 2px 0.00002cm rgba(0,0,0,0.75);
+	}
+		
+
+	#sectionFooter section ul li:first-child
+	{
+		margin-top:-6px;
+	}
+
+
+	#sectionFooter section ul li
+	{
+		padding-top:14px;
+		color:white;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 1.25em;
+		letter-spacing:0.025em;
+	
+		text-shadow:1px 2px 1px rgba(0,0,0,0.5);
+		text-decoration: none;
+		transform:scaleY(0.80);
+	}
+
+	#sectionFooter section ul li::first-letter
+	{
+		font-weight:525;
+		color:#9cfffc;
+	}
+
+	
+	
+	#sectionFooter section ul li a
+	{
+		text-decoration: none;
+		transition: color 0.8s steps(8);
+	}
+		
+	#sectionFooter section ul li a:link,
+	#sectionFooter section ul li a:visited
+	{
+		color:white;
+
+	}
+	
+	#sectionFooter section ul li a:hover
+	{
+		color:#deb574;
+		transition: color 0.6s steps(4);
+		
+	}
+
+	
+
+	
